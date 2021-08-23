@@ -1,0 +1,10 @@
+﻿  CS105 Lab 4.cpp
+C:\Users\Jay\source\repos\CS105 Lab 4\CS105 Lab 4.cpp(11,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+C:\Users\Jay\source\repos\CS105 Lab 4\CS105 Lab 4.cpp(12,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+C:\Users\Jay\source\repos\CS105 Lab 4\Alien.h(8,62): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\Jay\source\repos\CS105 Lab 4\Alien.h(8,79): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\Jay\source\repos\CS105 Lab 4\Alien.h(32,19): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+C:\Users\Jay\source\repos\CS105 Lab 4\Alien.h(202,27): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Jay\source\repos\CS105 Lab 4\Alien.h(241,26): warning C4018: '>=': signed/unsigned mismatch
+C:\Users\Jay\source\repos\CS105 Lab 4\Alien.h(302,18): warning C4101: 'g': unreferenced local variable
+  CS105 Lab 4.vcxproj -> C:\Users\Jay\source\repos\CS105 Lab 4\Debug\CS105 Lab 4.exe
