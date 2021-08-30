@@ -1,20 +1,21 @@
 #pragma once
+template<class T>
 class Alien {
 private:
-    int height, weight;
+    T height, weight;
     char gender;
 
 public:
-    Alien(float defNum = 0, char defGender = 'z') { height = defNum, weight = defNum, gender = defGender; }
-    Alien(int h, int w, char g) {
+    Alien(T defNum = 0, char defGender = 'z') { height = defNum, weight = defNum, gender = defGender; }
+    Alien(T h, T w, char g) {
         height = h, weight = w, gender = g;
     }
 
-    int getHeight() { return height; } // This function returns the height of the alien
-    int getWeight() { return weight; } // This function returns the weight of the alien
+    T getHeight() { return height; } // This function returns the height of the alien
+    T getWeight() { return weight; } // This function returns the weight of the alien
     char getGender() { return gender; } // This function returns the gender of the alien
-    void setHeight(int h) { height = h; } // This function sets the height of the alien
-    void setWeight(int w) { weight = w; } // This function sets the weight of the alien
+    void setHeight(T h) { height = h; } // This function sets the height of the alien
+    void setWeight(T w) { weight = w; } // This function sets the weight of the alien
     void setGender(char g) { gender = g; } // This function sets the gender of the alien
 
     //This function returns the Prestige of the alien
@@ -24,7 +25,7 @@ public:
             genderPoints = 2;
         else
             genderPoints = 3;
-        return height * weight * genderPoints;
+        return getHeight() * getWeight() * genderPoints;
     }
     //This operator allows two objects to be added
     Alien operator+(const Alien& a) {
@@ -99,7 +100,8 @@ public:
     }
     //This function allows the user to create an alien
     Alien& createAlien(Alien& a) {
-        int h, w, choice;
+        T h, w;
+        int choice;
         bool isTrue;
         char g;
         Graphics graphics;
@@ -145,10 +147,10 @@ public:
     }
     //This function will create 4 default alien
     vector<Alien>& createDefaultAlien(vector<Alien>& alien) {
-        Alien a1(50, 40, 'M');
+        Alien a1(50.43, 40.34, 'M');
         Alien a2(39, 60, 'F');
-        Alien a3(30, 20, 'F');
-        Alien a4(60, 90, 'M');
+        Alien a3(30.23, 20.22, 'F');
+        Alien a4(60, 90.54, 'M');
         alien.push_back(a1);
         alien.push_back(a2);
         alien.push_back(a3);
@@ -165,10 +167,10 @@ public:
         int i = 1;
         for (auto a : alien) {
             if (a.gender == g) {
-                cout << "\n" << string(6, '\t') << "|-----------------------------------------------------------------------------|"
-                    << "\n" << string(6, '\t') << "| Alien ID\t| Alien Height |\t| Alien Weight |\t|Alien Gender |"
-                    << "\n" << string(6, '\t') << "|-----------------------------------------------------------------------------|"
-                    << "\n" << string(6, '\t') << "    " << i
+                cout << "\n" << string(6, '\t') << "|------------------------------------------------------------------------------|"
+                    << "\n" << string(6, '\t') << "| Alien ID\t|   Alien Height   |\t|   Alien Weight   |\t| Alien Gender |"
+                    << "\n" << string(6, '\t') << "|------------------------------------------------------------------------------|"
+                    << "\n" << string(6, '\t') << "   " << i
                     << string(3, '\t') << a.height
                     << string(3, '\t') << a.weight
                     << string(3, '\t') << a.gender;
@@ -185,10 +187,10 @@ public:
         g.printAlienTitle();
         int i = 1;
         for (auto a : alien) {
-            cout << "\n" << string(6, '\t') << "|-----------------------------------------------------------------------------|"
-                << "\n" << string(6, '\t') << "| Alien ID\t| Alien Height |\t| Alien Weight |\t|Alien Gender |"
-                << "\n" << string(6, '\t') << "|-----------------------------------------------------------------------------|"
-                << "\n" << string(6, '\t') << "    " << i
+            cout << "\n" << string(6, '\t') << "|------------------------------------------------------------------------------|"
+                << "\n" << string(6, '\t') << "| Alien ID\t|  Alien Height  |\t|  Alien Weight  |\t| Alien Gender |"
+                << "\n" << string(6, '\t') << "|------------------------------------------------------------------------------|"
+                << "\n" << string(6, '\t') << "   " << i
                 << string(3, '\t') << a.height
                 << string(3, '\t') << a.weight
                 << string(3, '\t') << a.gender;
@@ -197,25 +199,14 @@ public:
         cout << "\n\n" << string(9, '\t');
     }
     //This function shows the details of an alien
-    bool showAlienStat(const vector<Alien>& alien, int id) {
-        bool isFound = true;
-
-        for (int i = 0; i < alien.size(); i++) {
-            if (i == id) {
-                cout << "\n" << string(9, '\t') << "|----------------------------|"
-                    << "\n" << string(9, '\t') << "|       Alien Details        |"
-                    << "\n" << string(9, '\t') << "|----------------------------|"
-                    << "\n" << string(9, '\t') << "| Alien " << i
-                    << "\n" << string(9, '\t') << "| Alien Height: " << alien[i].height
-                    << "\n" << string(9, '\t') << "| Alien Weight: " << alien[i].weight
-                    << "\n" << string(9, '\t') << "| Alien Gender: " << alien[i].gender << endl;
-                isFound = true;
-                break;
-            }
-            else
-                isFound = false;
-        }
-        return isFound;
+    void showAlienStat(const vector<Alien>& alien, int male, int female) {
+        cout << "\n" << string(9, '\t') << "|----------------------------------------------------|"
+             << "\n" << string(9, '\t') << "|                    Alien Details                   |"
+             << "\n" << string(9, '\t') << "|----------------------------------------------------|"
+             << "\n" << string(9, '\t') << "   Alien " << male+1 << "\t\t\tAlien " << female+1
+             << "\n" << string(9, '\t') << "   Alien Height: " << alien[male].height << "\t\tAlien Height : " << alien[female].height
+             << "\n" << string(9, '\t') << "   Alien Weight: " << alien[male].weight << "\t\tAlien Weight : " << alien[female].height
+             << "\n" << string(9, '\t') << "   Alien Gender: " << alien[male].gender << "\t\tAlien Gender : " << alien[female].height << endl;
     }
     //This function uses the overloaded + operator that enable two objects to be combined
     Alien mateAliens(vector<Alien>& alien, int m, int f) {
@@ -225,7 +216,11 @@ public:
     }
     //This function shows the prestige of aliens
     void comparePrestige(vector<Alien>& alien, int m, int f) {
-        cout << boolalpha << "\n" << string(9, '\t') << "|--------------------------------------------------|"
+        Graphics g;
+        system("cls");
+        g.printAlienTitle();
+        showAlienStat(alien, m, f);
+        cout << boolalpha << "\n\n" << string(9, '\t') << "|--------------------------------------------------|"
             << "\n" << string(9, '\t') << "|            Alien Prestige Comparison             |"
             << "\n" << string(9, '\t') << "|--------------------------------------------------|"
             << "\n" << string(9, '\t') << "|      Alien" << m + 1 << "             |            " << "Alien" << f + 1 << "      |"

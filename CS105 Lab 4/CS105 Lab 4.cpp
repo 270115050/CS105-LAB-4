@@ -21,8 +21,8 @@ using namespace std;
 
 int main()
 {
-    vector<Alien> alien;
-    Alien a;
+    vector<Alien<double>> alien;
+    Alien<double> a;
     Graphics g;
     int choice = 0, male = 1, female = 2;
     bool isTrue;

@@ -1,10 +1,23 @@
 ﻿  CS105 Lab 4.cpp
-C:\Users\Jay\source\repos\CS105 Lab 4\CS105 Lab 4.cpp(11,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
-C:\Users\Jay\source\repos\CS105 Lab 4\CS105 Lab 4.cpp(12,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
-C:\Users\Jay\source\repos\CS105 Lab 4\Alien.h(8,62): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
-C:\Users\Jay\source\repos\CS105 Lab 4\Alien.h(8,79): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
-C:\Users\Jay\source\repos\CS105 Lab 4\Alien.h(32,19): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
-C:\Users\Jay\source\repos\CS105 Lab 4\Alien.h(202,27): warning C4018: '<': signed/unsigned mismatch
-C:\Users\Jay\source\repos\CS105 Lab 4\Alien.h(241,26): warning C4018: '>=': signed/unsigned mismatch
-C:\Users\Jay\source\repos\CS105 Lab 4\Alien.h(302,18): warning C4101: 'g': unreferenced local variable
+C:\Users\Jay\source\repos\CS105 Lab 4\CS105 Lab 4.cpp(18,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+C:\Users\Jay\source\repos\CS105 Lab 4\CS105 Lab 4.cpp(19,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+C:\Users\Jay\source\repos\CS105 Lab 4\Alien.h(34,20): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+C:\Users\Jay\source\repos\CS105 Lab 4\Alien.h(330): message : see reference to class template instantiation 'Alien<T>' being compiled
+C:\Users\Jay\source\repos\CS105 Lab 4\Alien.h(298,18): warning C4101: 'g': unreferenced local variable
+C:\Users\Jay\source\repos\CS105 Lab 4\Alien.h(296): message : while compiling class template member function 'void Alien<double>::selectAlien(std::vector<Alien<double>,std::allocator<Alien<double>>> &,Alien<double> &)'
+C:\Users\Jay\source\repos\CS105 Lab 4\CS105 Lab 4.cpp(50): message : see reference to function template instantiation 'void Alien<double>::selectAlien(std::vector<Alien<double>,std::allocator<Alien<double>>> &,Alien<double> &)' being compiled
+C:\Users\Jay\source\repos\CS105 Lab 4\CS105 Lab 4.cpp(25): message : see reference to class template instantiation 'Alien<double>' being compiled
+C:\Users\Jay\source\repos\CS105 Lab 4\Alien.h(237,26): warning C4018: '>=': signed/unsigned mismatch
+C:\Users\Jay\source\repos\CS105 Lab 4\Alien.h(236): message : while compiling class template member function 'bool Alien<double>::isAlienExist(std::vector<Alien<double>,std::allocator<Alien<double>>> &,int,char)'
+C:\Users\Jay\source\repos\CS105 Lab 4\Alien.h(307): message : see reference to function template instantiation 'bool Alien<double>::isAlienExist(std::vector<Alien<double>,std::allocator<Alien<double>>> &,int,char)' being compiled
+C:\Users\Jay\source\repos\CS105 Lab 4\Alien.h(34,19): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+C:\Users\Jay\source\repos\CS105 Lab 4\Alien.h(31): message : while compiling class template member function 'Alien<double> Alien<double>::operator +(const Alien<double> &)'
+C:\Users\Jay\source\repos\CS105 Lab 4\Alien.h(214): message : see reference to function template instantiation 'Alien<double> Alien<double>::operator +(const Alien<double> &)' being compiled
+C:\Users\Jay\source\repos\CS105 Lab 4\Alien.h(28,42): warning C4244: 'return': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=double
+          ]
+C:\Users\Jay\source\repos\CS105 Lab 4\Alien.h(22): message : while compiling class template member function 'int Alien<double>::getPrestige(void)'
+C:\Users\Jay\source\repos\CS105 Lab 4\Alien.h(228): message : see reference to function template instantiation 'int Alien<double>::getPrestige(void)' being compiled
   CS105 Lab 4.vcxproj -> C:\Users\Jay\source\repos\CS105 Lab 4\Debug\CS105 Lab 4.exe
